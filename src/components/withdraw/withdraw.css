@@ -1,0 +1,86 @@
+.withdrawContainer {
+    width: 375px;
+    height: 812px;
+    border: 1px solid black;
+}
+
+.withdrawLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.withdrawWrap {
+    text-align: center;
+}
+
+.withdrawWrap p{
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+.withdrawWrap input{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+}
+
+.withdrawWrap input::placeholder {
+    position: relative;
+    /* top: 6px; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #DDE2E7;
+}
+
+.ctaBtn {
+    margin-top: 30px;
+    width: 100%;
+    height: 54px;
+    background: #3182F7;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.ctaBtnNeg {
+    margin-top: 30px;
+    width: 100%;
+    height: 54px;
+    background: #F3F5F9;
+    text-align: center;
+    color: #8A94A0;
+    font-size: 16px;
+    font-weight: 900;
+    pointer-events : none;
+}
+
+.allWithdraw {
+    margin-top: 20px;
+}
+
+.error {
+    display: block;
+    color: #F63C1F;
+    font-size: 14px;
+}
+
+.disable {
+    display: none;
+}
+
+.allWithdrawBtn {
+    width: 64px;
+    height: 26px;
+    border-radius: 6px;
+    background: #F2F7FF;
+    font-size: 12px;
+    color: #3182F7;
+}
