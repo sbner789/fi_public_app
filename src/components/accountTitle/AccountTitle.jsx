@@ -1,6 +1,7 @@
 import React from "react";
 import CommonApiService from "../../api/api-service";
 import "./accountTitle.css"
+import reset from "../../images/icon_refresh.svg"
 
 const AccountTitle = () => {
 
@@ -20,7 +21,9 @@ const AccountTitle = () => {
             <p>출금</p>
             <div className="reset">
                 <form onSubmit={resetAccountApi}>
-                    <button type="submit">reset</button>
+                    <button type="submit">
+                        <img src={reset} />
+                    </button>
                 </form>
             </div>
         </div>

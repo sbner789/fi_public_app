@@ -1,6 +1,7 @@
 .withdrawContainer {
     width: 375px;
-    height: 812px;
+    /* height: 812px; */
+    height: auto;
     border: 1px solid black;
 }
 

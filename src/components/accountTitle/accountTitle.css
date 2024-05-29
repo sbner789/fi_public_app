@@ -2,7 +2,9 @@
     position: relative;
     width: 375px;
     height: 54px;
-    line-height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -15,4 +17,21 @@
     position: absolute;
     top: 0px;
     right: 14px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.reset img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

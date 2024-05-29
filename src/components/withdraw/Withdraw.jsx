@@ -20,10 +20,11 @@ const WithDraw = () => {
     };
     return comma(uncomma(str));
     }
-    
+
+    const reg = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+
     const WithDrawAccountApi = async () => {
         try {
-            const reg = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
             await CommonApiService.withdraw(Number(account.replace(reg, "")))
             .then(res => {
                 console.log(res.data)
@@ -35,7 +36,7 @@ const WithDraw = () => {
 
     const inputHandler = (e) => {
        setAccount(inputPriceFormat(e.target.value))
-       if(account.length < 3) {
+       if(Number(account.replace(reg, "")) < 999) {
         setError("금액이 부족합니다.")
        } else {
         setError("")
@@ -57,8 +58,8 @@ const WithDraw = () => {
 
     useEffect(() => {
         getAllCount()
-        console.log("hello",Number(account))
-    }, [])
+        console.log("hello", account)
+    }, [account])
 
 
     return (
@@ -71,7 +72,7 @@ const WithDraw = () => {
                             <input 
                                 placeholder="금액 입력"
                                 type="text"
-                                value={account.length > 0 ? account+"원" : account}
+                                value={Number(account.replace(reg, "")) > 0 ? account+"원" : account}
                                 onChange={inputHandler}
                             />
                         </form>
